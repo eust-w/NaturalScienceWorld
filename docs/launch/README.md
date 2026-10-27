@@ -21,8 +21,16 @@ This is an Alpha prototype. The dimension visualization is not a physical solver
 
 Use reviewed captures of the current application for promotional media. Include the Alpha label and toy-model limitation in the video itself, and identify synthetic narration in the video credits and platform description.
 
-## Publication evidence
+## Verified launch links · 2026-10-28
 
-Repository visibility, a downloadable release, a working demo, and each video's public playback are separate postconditions. A draft, upload completion, or review submission is not proof of public publication.
+| Destination | Verified state | Link |
+| --- | --- | --- |
+| GitHub | Public MIT repository | [Source](https://github.com/eust-w/NaturalScienceWorld) |
+| GitHub Pages | Deployed; rendered UI and snapshot interaction checked | [Try the lab](https://eust-w.github.io/NaturalScienceWorld/) |
+| Alpha Release | Public prerelease with videos, covers, subtitles and provenance | [v0.1.0-alpha.1](https://github.com/eust-w/NaturalScienceWorld/releases/tag/v0.1.0-alpha.1) |
+| Douyin | Published; video playback checked | [Watch](https://www.douyin.com/video/7701392753959193875) |
+| X | Published to Everyone; video playback checked in an authenticated session | [Watch](https://x.com/eustancewu/status/2115125820385886522) |
 
-This document describes the release scope and materials. It does not assert that any platform has published the video. Add public links only after checking the destination page and its actual state. Keep account dashboards and private publication evidence out of the public repository.
+The 77-second introduction uses real application screenshots, synthetic Chinese narration, and burned-in Chinese and English subtitles. Both 1080p orientations and separate subtitle files are attached to the release.
+
+Repository publication, a release download, a working demo, and each platform's video playback are separate checks. Private dashboard evidence and pending platform states are retained locally under the ignored `output/launch/` directory.

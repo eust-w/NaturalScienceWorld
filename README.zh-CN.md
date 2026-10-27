@@ -1,5 +1,7 @@
 # NaturalScienceWorld · 自然科学世界
 
+[在线体验](https://eust-w.github.io/NaturalScienceWorld/) · [版本与视频下载](https://github.com/eust-w/NaturalScienceWorld/releases/tag/v0.1.0-alpha.1) · [抖音介绍](https://www.douyin.com/video/7701392753959193875) · [X 介绍](https://x.com/eustancewu/status/2115125820385886522)
+
 **把科学理论连成一本能阅读、能操作、能追溯来源的超书。**
 
 [English](README.md) · [本地运行](#本地运行) · [参与贡献](CONTRIBUTING.md) · [科学边界](#科学边界) · [MIT 许可证](LICENSE)

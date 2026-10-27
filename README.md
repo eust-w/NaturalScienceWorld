@@ -1,5 +1,7 @@
 # NaturalScienceWorld
 
+[Live demo](https://eust-w.github.io/NaturalScienceWorld/) · [Release & videos](https://github.com/eust-w/NaturalScienceWorld/releases/tag/v0.1.0-alpha.1) · [Douyin](https://www.douyin.com/video/7701392753959193875) · [X](https://x.com/eustancewu/status/2115125820385886522)
+
 **Explore scientific ideas through a connected book, an interactive lab, and a structured research registry.**
 
 [简体中文](README.zh-CN.md) · [Get started](#run-locally) · [Contribute](CONTRIBUTING.md) · [Scientific scope](#scientific-scope) · [MIT license](LICENSE)
