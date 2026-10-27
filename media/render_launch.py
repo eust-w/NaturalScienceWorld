@@ -259,7 +259,10 @@ def main():
         "videos": results,
     }
     (args.output / "media-provenance.json").write_text(json.dumps(provenance, ensure_ascii=False, indent=2), encoding="utf-8")
-    outputs = sorted(p for p in args.output.iterdir() if p.is_file() and p.name != "SHA256SUMS.txt")
+    media_names = ["NaturalScienceWorld-intro-landscape-1080p.mp4", "NaturalScienceWorld-intro-portrait-1080p.mp4",
+                   "NaturalScienceWorld.zh-CN.srt", "NaturalScienceWorld.en.srt", "cover-landscape.png",
+                   "cover-portrait.png", "timeline.json", "media-provenance.json"]
+    outputs = sorted(args.output / name for name in media_names)
     (args.output / "SHA256SUMS.txt").write_text("\n".join(f"{digest(p)}  {p.name}" for p in outputs)+"\n")
     for result in results:
         print(json.dumps(result), flush=True)
