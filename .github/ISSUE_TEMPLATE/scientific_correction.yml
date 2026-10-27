@@ -1,0 +1,29 @@
+name: Scientific correction
+description: Improve a claim, source, status label, equation, or model limitation.
+title: "[Science] "
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Affected claim and location
+      description: Identify the chapter, theory ID, or UI view and quote the short passage at issue.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction and scope
+      description: Distinguish established results, interpretation, and speculation.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting primary sources
+      description: Include DOI, arXiv ID, dataset, or original documentation. Explain what each source supports.
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Remaining uncertainty or model limitations

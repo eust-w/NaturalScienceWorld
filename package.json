@@ -1,0 +1,20 @@
+{
+  "name": "natural-science-world",
+  "version": "0.1.0-alpha.1",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "theory-lab"
+  ],
+  "scripts": {
+    "dev": "npm --workspace theory-lab run dev -- --host 127.0.0.1",
+    "build": "npm --workspace theory-lab run build",
+    "preview": "npm --workspace theory-lab run preview -- --host 127.0.0.1",
+    "test": "node --test research-hub/scripts/*.test.mjs",
+    "check": "npm test && npm run validate:registry && npm run build",
+    "validate:registry": "node research-hub/scripts/validate-registry.mjs",
+    "demo:dimensions": "node research-hub/experiments/dimensional-scale-model.mjs"
+  }
+}

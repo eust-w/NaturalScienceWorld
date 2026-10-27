@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NaturalScienceWorld Theory Registry",
+  "type": "object",
+  "required": [
+    "version",
+    "updated",
+    "theories"
+  ],
+  "description": "Structural schema. Citation-key uniqueness, bibliography resolution, calendar validity and credential-free source URLs are additionally checked by validate-registry.mjs. Source availability and scientific validity require human review.",
+  "properties": {
+    "version": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "theories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/theory"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "citation_key",
+        "title",
+        "url",
+        "role",
+        "note"
+      ],
+      "properties": {
+        "citation_key": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "note": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://[^/@\\s]+(?:[/?#]|$)"
+        },
+        "role": {
+          "enum": [
+            "background",
+            "empirical-evidence",
+            "theoretical-background"
+          ]
+        }
+      }
+    },
+    "theory": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "status",
+        "domain",
+        "scale",
+        "dimension_model",
+        "core_claim",
+        "evidence",
+        "open_questions",
+        "demo_hooks",
+        "sources"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "core_claim": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "status": {
+          "enum": [
+            "established",
+            "active-research",
+            "working-model",
+            "speculative"
+          ]
+        },
+        "domain": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "scale": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "evidence": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "open_questions": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "demo_hooks": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "dimension_model": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "established",
+                  "active-research"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "sources": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "working-model",
+                  "speculative"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "notes"
+            ],
+            "properties": {
+              "sources": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "enum": [
+                        "background",
+                        "theoretical-background"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

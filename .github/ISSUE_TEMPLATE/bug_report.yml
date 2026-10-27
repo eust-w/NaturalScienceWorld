@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem in the app or development workflow.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the view, selected theory, language, and parameters when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, device or viewport, Node version, and commit or release.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add screenshots or error output with private information removed. Report security vulnerabilities through SECURITY.md.

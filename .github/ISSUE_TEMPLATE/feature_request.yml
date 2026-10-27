@@ -1,0 +1,27 @@
+name: Feature or demo proposal
+description: Propose a focused learning workflow or reproducible demonstration.
+title: "[Proposal] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Learning or contributor problem
+      description: Describe who needs this and what they cannot do today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Keep the initial scope small and describe an observable result.
+    validations:
+      required: true
+  - type: textarea
+    id: science
+    attributes:
+      label: Scientific assumptions and validation
+      description: For a demo, include equations or references, units, limitations, and a known result to compare against.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and tradeoffs

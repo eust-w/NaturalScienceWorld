@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+*.log
+coverage/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+output/
+.qa/
+.playwright-cli/
+hyperbook/assets/prototypes/

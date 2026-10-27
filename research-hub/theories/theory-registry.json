@@ -1,0 +1,415 @@
+{
+  "$schema": "./theory-registry.schema.json",
+  "version": "0.1.0",
+  "updated": "2026-10-28",
+  "theories": [
+    {
+      "id": "classical-mechanics",
+      "name": "Classical Mechanics",
+      "status": "established",
+      "domain": [
+        "motion",
+        "force",
+        "macroscopic systems"
+      ],
+      "scale": [
+        "human",
+        "planetary"
+      ],
+      "dimension_model": {
+        "physical": "3 spatial dimensions plus time",
+        "state": "finite-dimensional phase space for many toy systems"
+      },
+      "core_claim": "Macroscopic bodies can often be modeled through positions, momenta, and deterministic equations of motion.",
+      "evidence": [
+        "laboratory mechanics",
+        "engineering systems",
+        "planetary approximations"
+      ],
+      "open_questions": [
+        "breakdown at quantum scale",
+        "breakdown near light speed",
+        "chaotic sensitivity"
+      ],
+      "demo_hooks": [
+        "phase-space-orbit",
+        "n-body-toy-model"
+      ],
+      "sources": [
+        {
+          "citation_key": "mit2016classical",
+          "title": "MIT OpenCourseWare: Classical Mechanics (8.01SC)",
+          "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+          "role": "background",
+          "note": "Course material on Newtonian motion, forces, momentum and energy. An educational reference, not a new empirical test."
+        }
+      ]
+    },
+    {
+      "id": "general-relativity",
+      "name": "General Relativity",
+      "status": "established",
+      "domain": [
+        "gravity",
+        "spacetime",
+        "cosmology"
+      ],
+      "scale": [
+        "planetary",
+        "stellar",
+        "cosmic"
+      ],
+      "dimension_model": {
+        "physical": "four-dimensional spacetime manifold",
+        "mathematical": "metric tensor and curvature"
+      },
+      "core_claim": "Gravity is modeled as the curvature of spacetime sourced by energy and momentum.",
+      "evidence": [
+        "perihelion precession",
+        "gravitational lensing",
+        "gravitational waves"
+      ],
+      "open_questions": [
+        "singularities",
+        "quantum gravity",
+        "dark energy interpretation"
+      ],
+      "demo_hooks": [
+        "curvature-geodesic",
+        "lensing-grid"
+      ],
+      "sources": [
+        {
+          "citation_key": "gw150914",
+          "title": "Observation of Gravitational Waves from a Binary Black Hole Merger",
+          "url": "https://arxiv.org/abs/1602.03837",
+          "role": "empirical-evidence",
+          "note": "GW150914 matched a binary black hole merger waveform predicted by general relativity. This reference supports the gravitational-wave example, not every evidence item."
+        }
+      ]
+    },
+    {
+      "id": "quantum-mechanics",
+      "name": "Quantum Mechanics",
+      "status": "established",
+      "domain": [
+        "states",
+        "measurement",
+        "microscopic systems"
+      ],
+      "scale": [
+        "quantum",
+        "atomic"
+      ],
+      "dimension_model": {
+        "physical": "system-dependent configuration",
+        "mathematical": "Hilbert space"
+      },
+      "core_claim": "Microscopic systems are described by states whose measurable outcomes are probabilistic.",
+      "evidence": [
+        "spectroscopy",
+        "interference",
+        "semiconductor devices"
+      ],
+      "open_questions": [
+        "interpretation of measurement",
+        "classical emergence",
+        "gravity coupling"
+      ],
+      "demo_hooks": [
+        "two-state-system",
+        "measurement-basis-sweep"
+      ],
+      "sources": [
+        {
+          "citation_key": "mit2016quantum",
+          "title": "MIT OpenCourseWare: Quantum Physics I (8.04)",
+          "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/",
+          "role": "background",
+          "note": "Introductory material on the experimental basis and wave mechanics of quantum physics. Background reading rather than a primary experimental report."
+        }
+      ]
+    },
+    {
+      "id": "quantum-field-theory",
+      "name": "Quantum Field Theory",
+      "status": "established",
+      "domain": [
+        "fields",
+        "particles",
+        "interactions"
+      ],
+      "scale": [
+        "quantum",
+        "particle"
+      ],
+      "dimension_model": {
+        "physical": "fields over spacetime",
+        "mathematical": "operator-valued fields and Fock spaces"
+      },
+      "core_claim": "Particles can be modeled as excitations of quantum fields, with interactions constrained by symmetries.",
+      "evidence": [
+        "particle scattering",
+        "precision electroweak tests",
+        "quantum electrodynamics"
+      ],
+      "open_questions": [
+        "non-perturbative regimes",
+        "gravity",
+        "vacuum energy"
+      ],
+      "demo_hooks": [
+        "field-mode-oscillator",
+        "symmetry-breaking-map"
+      ],
+      "sources": [
+        {
+          "citation_key": "mit2023qft",
+          "title": "MIT OpenCourseWare: Relativistic Quantum Field Theory I (8.323)",
+          "url": "https://ocw.mit.edu/courses/8-323-relativistic-quantum-field-theory-i-spring-2023/",
+          "role": "background",
+          "note": "Graduate course on field quantization and applications to particle and condensed matter physics. It does not validate all possible quantum field theories."
+        }
+      ]
+    },
+    {
+      "id": "standard-model",
+      "name": "Standard Model",
+      "status": "established",
+      "domain": [
+        "elementary particles",
+        "gauge interactions",
+        "Higgs mechanism"
+      ],
+      "scale": [
+        "particle"
+      ],
+      "dimension_model": {
+        "physical": "fields over spacetime",
+        "internal": "gauge and flavor degrees of freedom"
+      },
+      "core_claim": "Known elementary particles and three non-gravitational interactions are described by a gauge quantum field theory.",
+      "evidence": [
+        "collider measurements",
+        "Higgs boson discovery",
+        "precision particle data"
+      ],
+      "open_questions": [
+        "dark matter",
+        "neutrino masses",
+        "matter-antimatter asymmetry",
+        "gravity"
+      ],
+      "demo_hooks": [
+        "particle-family-table",
+        "interaction-graph"
+      ],
+      "sources": [
+        {
+          "citation_key": "atlas2012higgs",
+          "title": "Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC",
+          "url": "https://arxiv.org/abs/1207.7214",
+          "role": "empirical-evidence",
+          "note": "ATLAS observed a new boson compatible with the Standard Model Higgs boson. This is one experimental result, not a complete validation of every Standard Model claim."
+        }
+      ]
+    },
+    {
+      "id": "thermodynamics-statistical-mechanics",
+      "name": "Thermodynamics and Statistical Mechanics",
+      "status": "established",
+      "domain": [
+        "entropy",
+        "heat",
+        "macroscopic state"
+      ],
+      "scale": [
+        "atomic",
+        "human",
+        "stellar"
+      ],
+      "dimension_model": {
+        "macroscopic": "few aggregate variables",
+        "microscopic": "large phase space or state ensemble"
+      },
+      "core_claim": "Macroscopic regularities emerge from large ensembles of microscopic states.",
+      "evidence": [
+        "engines",
+        "phase transitions",
+        "thermal radiation",
+        "materials"
+      ],
+      "open_questions": [
+        "arrow of time",
+        "nonequilibrium complexity",
+        "gravity and entropy"
+      ],
+      "demo_hooks": [
+        "entropy-coarse-graining",
+        "ensemble-sampling"
+      ],
+      "sources": [
+        {
+          "citation_key": "mit2013statistical",
+          "title": "MIT OpenCourseWare: Statistical Physics I (8.044)",
+          "url": "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+          "role": "background",
+          "note": "Course material connecting probability, statistical mechanics and thermodynamics. Examples include thermal radiation and electrons in solids."
+        }
+      ]
+    },
+    {
+      "id": "lambda-cdm-cosmology",
+      "name": "Lambda-CDM Cosmology",
+      "status": "established",
+      "domain": [
+        "cosmology",
+        "large-scale structure",
+        "expansion"
+      ],
+      "scale": [
+        "cosmic"
+      ],
+      "dimension_model": {
+        "physical": "large-scale spacetime",
+        "parameters": "cosmological density and expansion parameters"
+      },
+      "core_claim": "The large-scale universe is modeled with cold dark matter, dark energy, expansion, and structure formation.",
+      "evidence": [
+        "cosmic microwave background",
+        "large-scale galaxy surveys",
+        "supernova observations"
+      ],
+      "open_questions": [
+        "dark matter identity",
+        "dark energy nature",
+        "early-universe tensions"
+      ],
+      "demo_hooks": [
+        "expansion-parameter-sweep",
+        "structure-growth-toy-model"
+      ],
+      "sources": [
+        {
+          "citation_key": "planck2020parameters",
+          "title": "Planck 2018 results. VI. Cosmological parameters",
+          "url": "https://arxiv.org/abs/1807.06209",
+          "role": "empirical-evidence",
+          "note": "Planck CMB data are consistent with the base six-parameter Lambda-CDM model. This does not establish the microscopic identity of dark matter or the nature of dark energy."
+        }
+      ],
+      "notes": "Established here means a widely used cosmological model with substantial observational support within its domain, not a settled account of dark matter, dark energy or current cosmological tensions."
+    },
+    {
+      "id": "quantum-gravity",
+      "name": "Quantum Gravity",
+      "status": "active-research",
+      "domain": [
+        "gravity",
+        "quantum theory",
+        "Planck scale"
+      ],
+      "scale": [
+        "planck",
+        "cosmic"
+      ],
+      "dimension_model": {
+        "physical": "uncertain at Planck scale",
+        "candidates": "strings, loops, holographic descriptions, emergent spacetime"
+      },
+      "core_claim": "A deeper framework should reconcile quantum theory with dynamical spacetime geometry.",
+      "evidence": [
+        "theoretical motivation: consistency between quantum theory and gravity",
+        "theoretical background: black hole thermodynamics",
+        "mathematical proposals: holographic dualities; not direct empirical confirmation"
+      ],
+      "open_questions": [
+        "empirical access",
+        "spacetime emergence",
+        "singularity resolution"
+      ],
+      "demo_hooks": [
+        "holographic-dimension-analogy",
+        "planck-scale-regime-map"
+      ],
+      "sources": [
+        {
+          "citation_key": "maldacena1998large",
+          "title": "The Large N Limit of Superconformal Field Theories and Supergravity",
+          "url": "https://arxiv.org/abs/hep-th/9711200",
+          "role": "theoretical-background",
+          "note": "A theoretical proposal for dualities in specific anti-de Sitter settings. It is not direct empirical evidence for quantum gravity or for this project's hypotheses."
+        }
+      ],
+      "notes": "Quantum gravity is an active research area. The cited theoretical work does not establish that a candidate describes the observed universe."
+    },
+    {
+      "id": "observer-information-frame",
+      "name": "Observer Information Frame",
+      "status": "working-model",
+      "domain": [
+        "information",
+        "measurement",
+        "observers"
+      ],
+      "scale": [
+        "quantum",
+        "human",
+        "cosmic"
+      ],
+      "dimension_model": {
+        "informational": "coordinates of accessible state, uncertainty, and compression",
+        "project_role": "connects physical theories to knowledge states inside the hyperbook"
+      },
+      "core_claim": "A theory entry can be compared by what information an observer can access, compress, and update.",
+      "evidence": [
+        "no empirical validation; project-local organizing model only"
+      ],
+      "open_questions": [
+        "formal definition",
+        "relation to entropy",
+        "observer dependence"
+      ],
+      "demo_hooks": [
+        "observer-access-meter",
+        "information-compression-map"
+      ],
+      "sources": [],
+      "notes": "This working model is a project-local way to organize questions about information and observers. It is not an established physical theory; no supporting empirical evidence is claimed."
+    },
+    {
+      "id": "dimensional-resonance-hypothesis",
+      "name": "Dimensional Resonance Hypothesis",
+      "status": "speculative",
+      "domain": [
+        "new hypotheses",
+        "dimensions",
+        "cross-scale structure"
+      ],
+      "scale": [
+        "quantum",
+        "human",
+        "cosmic"
+      ],
+      "dimension_model": {
+        "speculative": "different dimension types may couple through shared invariants or compression patterns",
+        "guardrail": "must not be presented as established physics"
+      },
+      "core_claim": "Some cross-scale regularities may be modeled as resonance between physical, state-space, and information dimensions.",
+      "evidence": [
+        "none yet; project hypothesis seed only"
+      ],
+      "open_questions": [
+        "mathematical formalism",
+        "testable consequence",
+        "distinction from analogy"
+      ],
+      "demo_hooks": [
+        "dimension-coupling-toy-model",
+        "cross-scale-invariant-search"
+      ],
+      "notes": "This speculative project-local hypothesis has no supporting empirical evidence, validated mathematical model or confirmed prediction. It is an analogy seed for discussion, not a discovered physical law.",
+      "sources": []
+    }
+  ]
+}
